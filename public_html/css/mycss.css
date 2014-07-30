@@ -91,9 +91,9 @@ and open the template in the editor.
     color:#ffffff;
     color:rgba(0, 0, 0, 0.4);
 }
-.row{
+/*.row{
     margin-top: -5px;
-}
+}*/
 #perfil{
     margin-bottom: 0;
 }
@@ -106,4 +106,16 @@ and open the template in the editor.
 img{
     height: 150px;
     width: 160px;
+}
+.aplicaciones{
+    margin-top: 20px;
+   
+}
+
+.descripcion{
+     background: #D8D8D8;
+}
+
+.hidden {
+    display: none;
 }

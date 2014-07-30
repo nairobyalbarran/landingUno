@@ -13,6 +13,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link href="css/starter-template.css" rel="stylesheet">
+        <link href="css/carousel.css" rel="stylesheet">
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="js/ie10-viewport-bug-workaround.js"></script>
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -152,73 +153,88 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div><!-- /.container -->
         <!--finaliza primer container-->
         <div class="container" id="porfolio">
             <div class="row">
-                <div class="col-md-12"  id="porfolio1">
+                <div class="col-md-12 portfolio1"  id="porfolio1">
                     <h3 class="text-left">Portfolio</h3>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="thumbnail">
+            <div class="row aplicaciones">
+                <!--                <div class="bs-example">
+                                     Carousel
+                                  ================================================== 
+                                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                                                Indicators 
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                                        </ol>
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                                               <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+                                                                                <img src="img/ID-100207056.jpg" alt="simbolos"/>                                
+                                                <div class="container">
+                                                    <div class="carousel-caption">
+                                                        <h1>Símbolos Químicos</h1>
+                                                                                                <img src="img/ID-100207056.jpg"/>
+                                                        <div class="row">
+                                                             <div class="col-md-6">
+                                                                
+                                                             </div>
+                                                            <div class="col-md-6">
+                                                                <p><strong>Técnologías utilizadas:</strong></p>
+                                                                <ul>
+                                                                    <li>HTML5</li>
+                                                                    <li>CC3</li>
+                                                                    <li>JavaScript</li>
+                                                                    <li>jQuery Mobile</li>
+                                                                    <li>LocalStore</li>
+                                                                    <li>Responsive Web Design</li>
+                                                                </ul>
+                                                             </div>
+                                                        </div>
+                                                        <p><span class="slide1">Disponible en las plataformas:</span></p>
+                                                        <p class="text-left"><span class="slide1">Android:<a href="https://play.google.com/store/apps/details?id=org.nairobyalbarran">https://play.google.com/store/apps/details?id=org.nairobyalbarran</a></span></p>
+                                                        <p>Firefox OS:<a href="https://marketplace.firefox.com/app/simbolos-3/">https://marketplace.firefox.com/app/simbolos-3/</a></p>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-3">
+                                                                                                        <a class="fancybox" rel="group1" href="img/captura1_320x480.png"><img class="img-thumbnail" src="img/captura1_320x480.png" alt="captura1"/></a>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-3">
+                                                                                                        <a class="fancybox" rel="group1" href="img/captura2_320x480.png"><img class="img-thumbnail" src="img/captura2_320x480.png" alt="captura2"/></a>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-3">
+                                                                                                        <a class="fancybox" rel="group1" href="img/captura2_320x480.png"><img class="img-thumbnail" src="img/captura3_320x480.png" alt="captura3"></a>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-3">
+                                                                                                        <a class="fancybox" rel="group1" href="img/captura4_320x480.png"><img class="img-thumbnail" src="img/captura4_320x480.png" alt="captura4"></a>
+                                                                                                    </div>
+                                                                                                </div>
+                
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                                    </div>  /.carousel 
+                                </div>     /.row 
+                            </div>    /.container -->
+                <div class="col-md-4 elemento">
+                    <div class="thumbnail" id="app">
                         <div class="caption center-block" style="text-align: center;">
                             <h2>Símbolos Químicos</h2>
                             <p>Aprender los símbolos químicos de los elementos de la tabla periódica.</p>  
                             <img src="img/simbolos_uno.png" alt="simbolos">
                             <p></p>
-                            <!--<p><a class="btn btn-primary btn-lg" href="index2.html" role="button">Detalles &raquo;</a></p>-->
+                            <!--                                    <p><a class="btn btn-primary btn-lg" href="index2.html" role="button">Detalles &raquo;</a></p>-->
 
-                            <!-- Button trigger modal -->
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                            <!--                                     Button trigger modal -->
+                            <button class="btn btn-primary" id="detalles">
                                 Detalles
                             </button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                            <h4 class="modal-title" id="myModalLabel">Trivial: Símbolos Químicos</h4>
-                                        </div>
-                                        <div class="modal-body text-left">
-                                            <p class="text-left">Juego divertido para aprender los símbolos químicos de los elementos de la tabla periódica. Apto para todas las edades, estudiantes de secundaria,
-                                                bachillerato y todo aquellos interesados en aprender o recordar los elementos de la tabla periódica.</p>
-                                            <p><strong>Técnologías utilizadas:</strong></p>
-                                            <ul>
-                                                <li>HTML5</li>
-                                                <li>CC3</li>
-                                                <li>JavaScript</li>
-                                                <li>jQuery Mobile</li>
-                                                <li>LocalStorage para almacenar datos estadísticos</li>
-                                                <li>PhoneGap</li>
-                                                <li>Responsive Web Design</li>
-                                            </ul>
-                                            <p><strong>Disponible en las plataformas:</strong> </p>
-                                            <p>Android:<a href="https://play.google.com/store/apps/details?id=org.nairobyalbarran">https://play.google.com/store/apps/details?id=org.nairobyalbarran</a></p>
-                                            <p>Firefox OS:<a href="https://marketplace.firefox.com/app/simbolos-3/">https://marketplace.firefox.com/app/simbolos-3/</a></p>
-                                            <div class="row">
-                                                <div class="col-md-3">
-                                                    <a class="fancybox" rel="group1" href="img/captura1_320x480.png"><img class="img-thumbnail" src="img/captura1_320x480.png" alt="captura1"/></a>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <a class="fancybox" rel="group1" href="img/captura2_320x480.png"><img class="img-thumbnail" src="img/captura2_320x480.png" alt="captura2"/></a>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <a class="fancybox" rel="group1" href="img/captura2_320x480.png"><img class="img-thumbnail" src="img/captura3_320x480.png" alt="captura3"></a>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <a class="fancybox" rel="group1" href="img/captura4_320x480.png"><img class="img-thumbnail" src="img/captura4_320x480.png" alt="captura4"></a>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -229,54 +245,10 @@
                             <p>Obten tu ubicación actual y compartela con quien tu quieras</p>
                             <img src="img/locmap_dos.png" alt="locmap">
                             <p></p>
-                            <!-- Button trigger modal -->
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal2">
+                            <!--Button trigger modal -->
+                            <button class="btn btn-primary" >
                                 Detalles
                             </button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                            <h4 class="modal-title" id="myModalLabel2">Localizador: LocMap</h4>
-                                        </div>
-                                        <div class="modal-body text-left">
-                                            <p class="text-left">Localiza tu posición en el mapa y proporciona tu dirección actual.</p>
-                                            <p><strong>Técnologías utilizadas:</strong></p>
-                                            <ul>
-                                                <li>HTML5</li>
-                                                <li>CC3</li>
-                                                <li>JavaScript</li>
-                                                <li>jQuery Mobile</li>
-                                                <li>Leaflet</li>
-                                                <li>Google Map API</li>
-                                                <li>PhoneGap</li>
-                                                <li>Responsive Web Design</li>
-                                            </ul>
-                                            <p><strong>Disponible en las plataformas:</strong> </p>
-                                            <p>Firefox OS:<a href="https://marketplace.firefox.com/app/locmap?src=search/"> https://marketplace.firefox.com/app/locmap?src=search/</a></p>
-                                            <div class="row">
-                                                <div class="col-md-3">
-                                                    <a class="fancybox" rel="group2" href="img/captura5_320x480.png"><img class="img-thumbnail" src="img/captura5_320x480.png" alt="captura5"/></a>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <a class="fancybox" rel="group2" href="img/captura6_320x480.png"><img class="img-thumbnail" src="img/captura6_320x480.png" alt="captura6"/></a>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <a class="fancybox" rel="group2" href="img/captura7_320x480.png"><img class="img-thumbnail" src="img/captura7_320x480.png" alt="captura7"></a>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <a class="fancybox" rel="group2" href="img/captura8_320x480.png"><img class="img-thumbnail" src="img/captura8_320x480.png" alt="captura8"></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -287,74 +259,298 @@
                             <p>Ubica tus tiendas y sitios de comida más cercanos y obten tu descuento</p>
                             <img src="img/infinitum_logo.png" alt="infinitum">
                             <p></p>
-                            <!-- Button trigger modal -->
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal3">
+                            <!--Button trigger modal -->
+                            <button class="btn btn-primary" >
                                 Detalles
                             </button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                            <h4 class="modal-title" id="myModalLabel3">Localizador: LocMap</h4>
-                                        </div>
-                                        <div class="modal-body text-left">
-                                            <p class="text-left">Esta aplicación fue desarrollada durante el Hackathon "Majada Hack 2014". Tuve la oportunidad de colaborar en el grupo "INFINITUM" como desarrollador Front End.</p>
-                                            <p><strong>Técnologías utilizadas:</strong></p>
-                                            <ul>
-                                                <li>HTML5</li>
-                                                <li>CC3</li>
-                                                <li>Bootstrap</li>
-                                                <li>jQuery Mobile</li>
-                                                <li>Responsive Web Design</li>
-                                            </ul>
-                                            <p><strong>Más detalles en:</strong></p>
-                                            <p><a href="http://jerogaren.com/blog/articulo/majadahack-2014/">http://jerogaren.com/blog/articulo/majadahack-2014/</a></p>
-
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <a class="fancybox" rel="group3" href="img/captura10_320x480.png"><img class="img-thumbnail" src="img/captura10_320x480.png" alt="captura10"/></a>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <a class="fancybox" rel="group3" href="img/captura11_320x480.png"><img class="img-thumbnail" src="img/captura11_320x480.png" alt="captura11"/></a>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <a class="fancybox" rel="group3" href="img/captura12_320x480.png"><img class="img-thumbnail" src="img/captura12_320x480.png" alt="captura12"/></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div><!-- /.container -->
+        <div class="container">
+            <div class="row descripcion1">
+                <div class="col-md-6 descripcion">
+                    <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4>Trivial: Símbolos Químicos</h4>
+                    <p class="text-left">Juego divertido para aprender los símbolos químicos de los elementos de la tabla periódica. Apto para todas las edades, estudiantes de secundaria,
+                        bachillerato y todo aquellos interesados en aprender o recordar los elementos de la tabla periódica.</p>
+                    <p><strong>Técnologías utilizadas:</strong></p>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CC3</li>
+                        <li>JavaScript</li>
+                        <li>jQuery Mobile</li>
+                        <li>LocalStorage para almacenar datos estadísticos</li>
+                        <li>PhoneGap</li>
+                        <li>Responsive Web Design</li>
+                    </ul>
+                    <p><strong>Disponible en las plataformas:</strong> </p>
+                    <p>Android:<a href="https://play.google.com/store/apps/details?id=org.nairobyalbarran">https://play.google.com/store/apps/details?id=org.nairobyalbarran</a></p>
+                    <p>Firefox OS:<a href="https://marketplace.firefox.com/app/simbolos-3/">https://marketplace.firefox.com/app/simbolos-3/</a></p>
+                </div>
+
+                <div class="col-md-6 descripcion">
+                    <!-- Carousel
+           ================================================== -->
+
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="container">
+
+
+                                    <img id="Firstslide" src="img/simbolos_uno.png" alt="First slide">
+
+                                </div>
+                            </div>
+                            <div class="item">
+
+                                <div class="container">
+                                    <div class="carousel-caption">
+                                        <img id="Firstslide" src="img/simbolos_uno.png" alt="First slide">
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+
+                                <div class="container">
+                                   
+                                    <div class="carousel-caption">
+                                        <img id="Firstslide" src="img/simbolos_uno.png" alt="First slide">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </div><!-- /.carousel -->
+                </div>
+
+
+                <!--                        <a class="fancybox" rel="group1" href="img/simbolos_uno.png"><img class="img-thumbnail" src="img/simbolos_uno.png" alt="simbolos"/></a>
+                
+                                        <div class="row hidden">
+                
+                                            <a class="fancybox" rel="group1" href="img/captura1_320x480.png"><img class="img-thumbnail" src="img/captura1_320x480.png" alt="captura1"/></a>
+                                            <a class="fancybox" rel="group1" href="img/captura2_320x480.png"><img class="img-thumbnail" src="img/captura2_320x480.png" alt="captura2"/></a>
+                
+                
+                                            <a class="fancybox" rel="group1" href="img/captura2_320x480.png"><img class="img-thumbnail" src="img/captura3_320x480.png" alt="captura3"></a>
+                
+                
+                                            <a class="fancybox" rel="group1" href="img/captura4_320x480.png"><img class="img-thumbnail" src="img/captura4_320x480.png" alt="captura4"></a>
+                                        </div>-->
+            </div>
         </div>
-    </div>
-    <!--finaliza el segundo container-->
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="js/jquery.appear.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
 
-    <script type="text/javascript" src="js/jquery-migrate-1.0.0.js"></script>
-    <script src=" http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.js"></script>
-    <!-- Add jQuery library -->
-    <!--        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-             Add mousewheel plugin (this is optional) 
-            <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
-    -->        <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-    <script type="text/javascript" src="js/jquery.fancybox-buttons.js"></script>
-    <script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
-    <script type="text/javascript" src="js/jquery.fancybox-thumbs.js"></script>
-</body>
+
+
+        <!--                    <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <div class="caption center-block" style="text-align: center;">
+                                        <h2>Símbolos Químicos</h2>
+                                        <p>Aprender los símbolos químicos de los elementos de la tabla periódica.</p>  
+                                        <img src="img/simbolos_uno.png" alt="simbolos">
+                                        <p></p>
+                                                                            <p><a class="btn btn-primary btn-lg" href="index2.html" role="button">Detalles &raquo;</a></p>
+        
+                                                                             Button trigger modal 
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                            Detalles
+                                        </button>
+                                                                             Modal 
+                                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                        <h4 class="modal-title" id="myModalLabel">Trivial: Símbolos Químicos</h4>
+                                                    </div>
+                                                    <div class="modal-body text-left">
+                                                        <p class="text-left">Juego divertido para aprender los símbolos químicos de los elementos de la tabla periódica. Apto para todas las edades, estudiantes de secundaria,
+                                                            bachillerato y todo aquellos interesados en aprender o recordar los elementos de la tabla periódica.</p>
+                                                        <p><strong>Técnologías utilizadas:</strong></p>
+                                                        <ul>
+                                                            <li>HTML5</li>
+                                                            <li>CC3</li>
+                                                            <li>JavaScript</li>
+                                                            <li>jQuery Mobile</li>
+                                                            <li>LocalStorage para almacenar datos estadísticos</li>
+                                                            <li>PhoneGap</li>
+                                                            <li>Responsive Web Design</li>
+                                                        </ul>
+                                                        <p><strong>Disponible en las plataformas:</strong> </p>
+                                                        <p>Android:<a href="https://play.google.com/store/apps/details?id=org.nairobyalbarran">https://play.google.com/store/apps/details?id=org.nairobyalbarran</a></p>
+                                                        <p>Firefox OS:<a href="https://marketplace.firefox.com/app/simbolos-3/">https://marketplace.firefox.com/app/simbolos-3/</a></p>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <a class="fancybox" rel="group1" href="img/captura1_320x480.png"><img class="img-thumbnail" src="img/captura1_320x480.png" alt="captura1"/></a>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <a class="fancybox" rel="group1" href="img/captura2_320x480.png"><img class="img-thumbnail" src="img/captura2_320x480.png" alt="captura2"/></a>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <a class="fancybox" rel="group1" href="img/captura2_320x480.png"><img class="img-thumbnail" src="img/captura3_320x480.png" alt="captura3"></a>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <a class="fancybox" rel="group1" href="img/captura4_320x480.png"><img class="img-thumbnail" src="img/captura4_320x480.png" alt="captura4"></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <div class="caption center-block" style="text-align: center;">
+                                        <h2>LocMap</h2>
+                                        <p>Obten tu ubicación actual y compartela con quien tu quieras</p>
+                                        <img src="img/locmap_dos.png" alt="locmap">
+                                        <p></p>
+                                                                             Button trigger modal 
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal2">
+                                            Detalles
+                                        </button>
+                                                                             Modal 
+                                        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                        <h4 class="modal-title" id="myModalLabel2">Localizador: LocMap</h4>
+                                                    </div>
+                                                    <div class="modal-body text-left">
+                                                        <p class="text-left">Localiza tu posición en el mapa y proporciona tu dirección actual.</p>
+                                                        <p><strong>Técnologías utilizadas:</strong></p>
+                                                        <ul>
+                                                            <li>HTML5</li>
+                                                            <li>CC3</li>
+                                                            <li>JavaScript</li>
+                                                            <li>jQuery Mobile</li>
+                                                            <li>Leaflet</li>
+                                                            <li>Google Map API</li>
+                                                            <li>PhoneGap</li>
+                                                            <li>Responsive Web Design</li>
+                                                        </ul>
+                                                        <p><strong>Disponible en las plataformas:</strong> </p>
+                                                        <p>Firefox OS:<a href="https://marketplace.firefox.com/app/locmap?src=search/"> https://marketplace.firefox.com/app/locmap?src=search/</a></p>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <a class="fancybox" rel="group2" href="img/captura5_320x480.png"><img class="img-thumbnail" src="img/captura5_320x480.png" alt="captura5"/></a>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <a class="fancybox" rel="group2" href="img/captura6_320x480.png"><img class="img-thumbnail" src="img/captura6_320x480.png" alt="captura6"/></a>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <a class="fancybox" rel="group2" href="img/captura7_320x480.png"><img class="img-thumbnail" src="img/captura7_320x480.png" alt="captura7"></a>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <a class="fancybox" rel="group2" href="img/captura8_320x480.png"><img class="img-thumbnail" src="img/captura8_320x480.png" alt="captura8"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>-->
+        <!--                        <div class="col-md-4">
+                                    <div class="thumbnail">
+                                        <div class="caption center-block" style="text-align: center;">
+                                            <h2>Infinitum</h2>
+                                            <p>Ubica tus tiendas y sitios de comida más cercanos y obten tu descuento</p>
+                                            <img src="img/infinitum_logo.png" alt="infinitum">
+                                            <p></p>
+                                                                                 Button trigger modal 
+                                            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal3">
+                                                Detalles
+                                            </button>
+                                                                                 Modal 
+                                            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                            <h4 class="modal-title" id="myModalLabel3">Localizador: LocMap</h4>
+                                                        </div>
+                                                        <div class="modal-body text-left">
+                                                            <p class="text-left">Esta aplicación fue desarrollada durante el Hackathon "Majada Hack 2014". Tuve la oportunidad de colaborar en el grupo "INFINITUM" como desarrollador Front End.</p>
+                                                            <p><strong>Técnologías utilizadas:</strong></p>
+                                                            <ul>
+                                                                <li>HTML5</li>
+                                                                <li>CC3</li>
+                                                                <li>Bootstrap</li>
+                                                                <li>jQuery Mobile</li>
+                                                                <li>Responsive Web Design</li>
+                                                            </ul>
+                                                            <p><strong>Más detalles en:</strong></p>
+                                                            <p><a href="http://jerogaren.com/blog/articulo/majadahack-2014/">http://jerogaren.com/blog/articulo/majadahack-2014/</a></p>
+        
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <a class="fancybox" rel="group3" href="img/captura10_320x480.png"><img class="img-thumbnail" src="img/captura10_320x480.png" alt="captura10"/></a>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <a class="fancybox" rel="group3" href="img/captura11_320x480.png"><img class="img-thumbnail" src="img/captura11_320x480.png" alt="captura11"/></a>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <a class="fancybox" rel="group3" href="img/captura12_320x480.png"><img class="img-thumbnail" src="img/captura12_320x480.png" alt="captura12"/></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>-->
+
+        <!-- Bootstrap core JavaScript
+================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery.appear.js"></script>
+        <script type="text/javascript" src="js/carousel.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        
+        <script type="text/javascript" src="js/main.js"></script>
+
+        <script type="text/javascript" src="js/jquery-migrate-1.0.0.js"></script>
+        <script src=" http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.js"></script>
+        <!-- Add jQuery library -->
+        <!--        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+                 Add mousewheel plugin (this is optional) 
+                <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+        -->
+        
+        <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+        <script type="text/javascript" src="js/jquery.fancybox-buttons.js"></script>
+        <script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
+        <script type="text/javascript" src="js/jquery.fancybox-thumbs.js"></script>
+    </body>
 </html>
