@@ -14,29 +14,34 @@ and open the template in the editor.
 
 /* Carousel base class */
 
+
+
+/*.carousel-inner,.carousel,.item,.container,.fill {
+  height:100%;
+  width:100%;
+}*/
 .carousel {
-    height: 300px;
-/*    margin-bottom: 60px;*/
-     
-}
-
-.carousel-inner{
+    height: 380px;
+    /*    margin-bottom: 60px;*/
 
 }
+
+
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
     z-index: 10;
-    left: 10%!important;
+    left: 8%;
     right: 10%;
-/*    padding-bottom: 30px;*/
+    /*    padding-bottom: 30px;*/
     top: 0%;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-    height: 300px;
-      background-color:#D8D8D8;
-/*    background-color:#49ACD6;*/
+    height: 380px;
+    background-color:#FFFFFF;
+
+    /*    background-color:#49ACD6;*/
 }
 
 
@@ -47,17 +52,46 @@ and open the template in the editor.
     min-width: 100%;
     height: 400px;
 }*/
-
+/*
 .slide1{
     font-size: 16px;
+}*/
+
+
+
+.Firstslide{
+
+    height: 360px;
+/*    width: 300px;*/
 }
 
-#Firstslide{
-    margin: auto;
-
-    
+.carousel-control.right{
+    background-image: none;
+    background-color: #FFFFFF;
+}
+.carousel-control.left{
+    background-image: none;
+    background-color: #FFFFFF;
 }
 
+.glyphicon.glyphicon-chevron-left{
+    color: #666666;
+}
+.glyphicon.glyphicon-chevron-right{
+    color: #666666;
+}
+
+.carousel-indicators li{
+    border:solid #666666;
+    background-color: whitesmoke;
+}
+.carousel-indicators .active{
+    background-color: #666666;
+}
+
+ol.carousel-indicators{
+    bottom: 5px;
+}
 /* MARKETING CONTENT
 -------------------------------------------------- */
 

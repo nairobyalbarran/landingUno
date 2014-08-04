@@ -91,31 +91,47 @@ and open the template in the editor.
     color:#ffffff;
     color:rgba(0, 0, 0, 0.4);
 }
-/*.row{
-    margin-top: -5px;
-}*/
+
 #perfil{
     margin-bottom: 0;
 }
 
-#porfolio1{
+#descripcionPortfolio, #contacto{
     border-bottom:5px solid #999;
     margin-bottom: 15px;
 }
 
 img{
-    height: 150px;
-    width: 160px;
+    height: 390px;
+    width: 230px;
 }
+
+#linkedin, #github, #envelope{
+    height: 48px;
+    width: 48px;
+}
+#phone{
+    height: 35px;
+    width: 35px;
+}
+
+
 .aplicaciones{
-    margin-top: 20px;
-   
+
+    margin-bottom: 20px;
 }
 
 .descripcion{
-     background: #D8D8D8;
+    background: #E8E8E8;
+    height: 380px;
+    margin-bottom: 20px;
+}
+
+.detalleApp1{
+    background: #E8E8E8;
 }
 
 .hidden {
     display: none;
 }
+

@@ -36,12 +36,12 @@ jQuery(document).ready(function() {
 //};
 
 $(document).ready(function() {
-$('.carousel').carousel();
-$(".fancybox")
-    .attr('rel', 'gallery')
-    .fancybox({
-        padding : 0
-    });
+    $('.carousel').carousel();
+    $(".fancybox")
+            .attr('rel', 'gallery')
+            .fancybox({
+                padding: 0
+            });
     $("a.fancybox").fancybox();
 
     /* Using custom settings */
@@ -65,7 +65,7 @@ $(".fancybox")
 function show() {
 
     $("#app").hide();
-    $('#detalles').click(function() {
+    $('.detalles').click(function() {
 
         $('#descripcion').fadeIn(2000);
 
@@ -76,17 +76,37 @@ function show() {
 $(document).ready(function() {
 
     $('.descripcion').hide();
-    $('#detalles').on('click', function() {
+    $('#app').on('click', function() {
         //$("#app").hide();
-        $('.descripcion').fadeIn(2000);
-        $('.descripcion').insertAfter('.portfolio1');
-
+        $('.detalleApp1').fadeIn(2000);
+        $('.detalleApp1').insertAfter('.portfolio');
+        $('.detalleApp2').hide();
+        $('.detalleApp3').hide();
     });
 
+    $('#app2').on('click', function() {
+        //$("#app").hide();
+        $('.detalleApp2').fadeIn(2000);
+        $('.detalleApp2').insertAfter('.portfolio');
+        $('.detalleApp1').hide();
+        $('.detalleApp3').hide();
+    });
+
+    $('#app3').on('click', function() {
+        //$("#app").hide();
+        $('.detalleApp3').fadeIn(2000);
+        $('.detalleApp3').insertAfter('.portfolio');
+        $('.detalleApp1').hide();
+        $('.detalleApp2').hide();
+    });
+
+
+
     $('.close').on('click', function() {
-        $('.descripcion').fadeOut("slow");
-        $('.aplicaciones').insertAfter('.portfolio1', 2000);
-        
+        $('.detalleApp1').hide();
+        $('.detalleApp2').hide();
+        $('.detalleApp3').hide();
+        $('.aplicaciones').insertAfter('.portfolio');
     });
 
 });
