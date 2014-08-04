@@ -26,52 +26,10 @@ jQuery(document).ready(function() {
     });
 });
 
-//window.onload = function() {
-//
-//    $(document).ready(function() {
-//        $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").attr('rel', 'gallery').fancybox();
-//
-//    });
-//
-//};
 
 $(document).ready(function() {
     $('.carousel').carousel();
-    $(".fancybox")
-            .attr('rel', 'gallery')
-            .fancybox({
-                padding: 0
-            });
-    $("a.fancybox").fancybox();
-
-    /* Using custom settings */
-
-    $("a#inline").fancybox({
-        'hideOnContentClick': true
-    });
-//
-//    /* Apply fancybox to multiple items */
-//
-//    $("a.group").fancybox({
-//        'transitionIn': 'elastic',
-//        'transitionOut': 'elastic',
-//        'speedIn': 600,
-//        'speedOut': 200,
-//        'overlayShow': false
-//    });
-
 });
-
-function show() {
-
-    $("#app").hide();
-    $('.detalles').click(function() {
-
-        $('#descripcion').fadeIn(2000);
-
-    });
-}
-
 
 $(document).ready(function() {
 
