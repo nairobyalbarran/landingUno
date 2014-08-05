@@ -132,11 +132,6 @@
                             <div class="skill-bar-percent">70%</div>
                         </div> <!-- End Skill Bar -->
 
-                        <!--                            <div class="skillbar clearfix " data-percent="70%">
-                                                        <div class="skillbar-title" style="background: #124e8c;"><span>Photoshop</span></div>
-                                                        <div class="skillbar-bar" style="background: #4288d0;"></div>
-                                                        <div class="skill-bar-percent">70%</div>
-                                                    </div>  End Skill Bar -->
                     </div>
                 </div>
             </div>
@@ -320,7 +315,6 @@
                 <div class="col-md-5 descripcion detalleApp3">
                     <!-- Carousel==================== -->
                     <div id="myCarousel3" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
                         <ol class="carousel-indicators">
                             <li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
                             <li data-target="#myCarousel3" data-slide-to="1"></li>
@@ -359,7 +353,7 @@
                         </div>
                         <a class="left carousel-control" href="#myCarousel3" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
                         <a class="right carousel-control" href="#myCarousel3" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-                    </div><!-- /.carousel -->
+                    </div>
                 </div>
                 <div class="col-md-7 descripcion detalleApp3">
                     <div>
@@ -379,7 +373,7 @@
                     </div>
                 </div>
             </div>
-        </div><!-- /.container -->
+        </div>
         <div class="container">
             <div class="row" id="contacto">
                 <div class="col-md-12">
@@ -390,17 +384,13 @@
                 <div class="col-md-8">
                     <p>Si te ha gustado algo de lo que has visto o tienes alguna propuesta, idea o necesidad para tu proyecto y quieres contar conmigo 
                         ¡No dudes en contactarme!<br>
-                        Rellena el formulario y en breve recibirás tu respuesta.</p>
-                    <div class="row">
-                        <form role="form" action="mail.php" target="_blank">
+                        Rellena el formulario y en breve recibirás una respuesta.</p>
+                    <form role="form" action="mail.php" target="_blank">
+                        <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="nombre">Nombre*</label>
                                     <input type="password" class="form-control" id="nombre" name="nombre" placeholder="Nombre...">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Email</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email...">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Teléfono</label>
@@ -409,25 +399,35 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
+                                    <label for="exampleInputEmail1">Email*</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email...">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Compañia</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
                                     <label for="exampleInputEmail1">¿En qué puedo ayudarte?</label>
-                                    <textarea class="form-control" rows="6"></textarea>
+                                    <textarea class="form-control" rows="4"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary">¡Envíame tu mensaje!</button>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                        </div> 
+                    </form>
                 </div>
                 <div class="col-md-4">
-                    También puedes escribirme o contactar conmigo a través de:
-                    <div>
+                    También puedes escribirme o ver más detalles de lo que hago a través de:
+                    <div id="redesSociales">
                         <ul class="list-inline">
-                            <li><p><a><i class="fa fa-envelope fa-2x"></i></a>  nairoby.albarran@gmail.com</p></li> 
-                        </ul>
-                        <ul class="list-inline"> 
-                            <li><a data-toggle="tooltip" title="Github"><i class="fa fa-github-square fa-3x"></i></a></li>
-                            <li><a data-toggle="tooltip" title="Linkedin"><i class="fa fa-linkedin-square fa-3x"></i></a></li>
+                            <li><p><a><i class="fa fa-envelope fa-2x"></i></a>   nairoby.albarran@gmail.com</p></li>
+                            <li><p><a data-toggle="tooltip" title="Linkedin"><i class="fa fa-linkedin-square fa-2x"></i></a>  es.linkedin.com/in/nairobialbarran/</p></li> 
+                            <li><p><a data-toggle="tooltip" title="Github"><i class="fa fa-github-square fa-2x"></i></a>  https://github.com/nairobyalbarran</p></li>
                         </ul>
                     </div>
                 </div>      
@@ -440,11 +440,5 @@
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript" src="js/jquery-migrate-1.0.0.js"></script>
         <script src=" http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.js"></script>
-        <!-- Add jQuery library -->
-        <!--        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-                 Add mousewheel plugin (this is optional) 
-                <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
-        -->
-
     </body>
 </html>
