@@ -28,11 +28,17 @@ jQuery(document).ready(function() {
 
 
 $(document).ready(function() {
+
+    $(document).on('click', 'a.smooth', function(e) {
+        e.preventDefault();
+        var $link = $(this);
+        var anchor = $link.attr('href');
+        $('html, body').stop().animate({
+            scrollTop: $(anchor).offset().top
+        }, 1000);
+    });
+
     $('.carousel').carousel();
-});
-
-$(document).ready(function() {
-
     $('.descripcion').hide();
     $('#app').on('click', function() {
         //$("#app").hide();
@@ -58,13 +64,13 @@ $(document).ready(function() {
         $('.detalleApp2').hide();
     });
 
-
-
     $('.close').on('click', function() {
         $('.detalleApp1').hide();
         $('.detalleApp2').hide();
         $('.detalleApp3').hide();
         $('.aplicaciones').insertAfter('.portfolio');
     });
-
 });
+
+
+

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
@@ -43,6 +43,7 @@
 
                 var chart = new google.visualization.PieChart(document.getElementById('piechart'));
                 chart.draw(data, options);
+
             }
 
         </script>
@@ -62,8 +63,8 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="#">Información</a></li>
-                        <li><a href="#portafolio">Portfolio</a></li>
-                        <li><a href="#contact">Contacto</a></li>
+                        <li><a href="#portafolio" class="smooth">Portfolio</a></li>
+                        <li><a href="#contacto" class="smooth">Contacto</a></li>
                     </ul>
                     <form class="navbar-form navbar-left">
                         <input type="text" class="form-control" placeholder="Search...">
@@ -89,7 +90,7 @@
                     <p class="text-left">Desarrollo aplicaciones web y móviles, multiplataforma. Trabajo como freelance en proyectos para clientes, así como en proyectos personales. 
                         Me encanta aprender y probar nuevas tecnologías.</p>
                     <p class="text-left">Tengo una larga trayectoria en investigación y gestión de proyectos. Recientemente he obtenido las certificaciones: ITIL®, Agile Project Management™, Lean IT y CMDB.</p>
-                    <p class="text-left">Te invito a que veas mis últimos trabajos...!Bienvenido a mi portfolio personal online!</p>
+                    <p class="text-left">Te invito a que veas mis últimos trabajos...¡Bienvenido a mi portfolio personal online!</p>
                 </div>
                 <div class="col-md-4" id="perfil">
                     <h3 class="text-left">Mi perfil</h3>
@@ -137,8 +138,8 @@
             </div>
         </div><!-- /.container -->
 
-        <div class="container" >
-            <div class="row" id="portafolio">
+        <div class="container" id="portafolio">
+            <div class="row">
                 <div class="col-md-12 portfolio"  id="descripcionPortfolio">
                     <h3 class="text-left">Portfolio</h3>
                 </div>
@@ -150,9 +151,10 @@
                     <div class="thumbnail">
                         <div class="caption center-block" style="text-align: center;">
                             <h3>Símbolos Químicos</h3>
-                            <p>Aprender los símbolos químicos de los elementos de la tabla periódica.</p>  
-                            <a id="app" href="#detalles1"><img src="img/simbolos_uno.png" alt="simbolos"/></a>
+                            <p>Juega con los elementos de la tabla periódica</p>  
+                            <img src="img/simbolos_uno.png" alt="simbolos"/>
                             <p></p>
+                            <p><a class="btn btn-info" id="app" href="#detalles1" role="button">Detalles &raquo;</a></p>
                         </div>
                     </div>
                 </div>
@@ -160,9 +162,10 @@
                     <div class="thumbnail">
                         <div class="caption center-block" style="text-align: center;">
                             <h3>LocMap</h3>
-                            <p>Obten tu ubicación actual y compartela con quien tu quieras.</p>
-                            <a id="app2" href="#detalles1"><img src="img/locmap_dos.png" alt="locmap"/></a>
+                            <p>Obten tu ubicación actual y compartela</p>
+                            <img src="img/locmap_dos.png" alt="locmap"/>
                             <p></p>
+                            <p><a class="btn btn-info" id="app2" href="#detalles1" role="button">Detalles &raquo;</a></p>
                         </div>
                     </div>
                 </div>
@@ -170,9 +173,10 @@
                     <div class="thumbnail">
                         <div class="caption center-block" style="text-align: center;">
                             <h3>Infinitum</h3>
-                            <p>Ubica tus tiendas y sitios de comida más cercanos y obten descuentos.</p>
-                            <a id="app3"  href="#detalles1"><img src="img/infinitum_logo.png" alt="infinitum"/></a>
+                            <p>Ubica tus tiendas y sitios de comida más cercanos</p>
+                            <img src="img/infinitum_logo.png" alt="infinitum"/>
                             <p></p>
+                            <p><a class="btn btn-info" id="app3"  href="#detalles1" role="button">Detalles &raquo;</a></p>
                         </div>
                     </div>
                 </div>
@@ -385,37 +389,37 @@
                     <p>Si te ha gustado algo de lo que has visto o tienes alguna propuesta, idea o necesidad para tu proyecto y quieres contar conmigo 
                         ¡No dudes en contactarme!<br>
                         Rellena el formulario y en breve recibirás una respuesta.</p>
-                    <form role="form" action="mail.php" target="_blank">
+                    <form role="form" action="mail.php" target="_blank" method="post" name="formulario" id="formulario">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="nombre">Nombre*</label>
-                                    <input type="password" class="form-control" id="nombre" name="nombre" placeholder="Nombre...">
+                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre...">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Teléfono</label>
-                                    <input type="email" class="form-control" id="telefono" placeholder="Teléfono...">
+                                    <label for="telefono">Teléfono</label>
+                                    <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Teléfono...">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email*</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email...">
+                                    <label for="email">Email*</label>
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="Email...">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Compañia</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email...">
+                                    <label for="empresa">Empresa</label>
+                                    <input type="text" class="form-control" id="empresa" name="empresa" placeholder="Empresa...">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">¿En qué puedo ayudarte?</label>
-                                    <textarea class="form-control" rows="4"></textarea>
+                                    <label for="comentarios">¿En qué puedo ayudarte?*</label>
+                                    <textarea class="form-control" rows="4" name="comentarios"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary">¡Envíame tu mensaje!</button>
+                                    <button type="submit" class="btn btn-primary" value="Submit" id="submit">¡Envíame tu mensaje!</button>
                                 </div>
                             </div>
                         </div> 
@@ -433,6 +437,7 @@
                 </div>      
             </div>
         </div>
+
         <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="js/jquery.appear.js"></script>
         <script type="text/javascript" src="js/carousel.js"></script>
