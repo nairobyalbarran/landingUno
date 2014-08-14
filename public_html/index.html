@@ -389,13 +389,23 @@
                     <p>Si te ha gustado algo de lo que has visto o tienes alguna propuesta, idea o necesidad para tu proyecto y quieres contar conmigo 
                         ¡No dudes en contactarme!<br>
                         Rellena el formulario y en breve recibirás una respuesta.</p>
-                    <form role="form" action="mail.php" target="_blank" method="post" name="formulario" id="formulario">
+                    <form role="form" method="post" name="formulario" id="formulario" target="_blank" action="mail.php">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="nombre">Nombre*</label>
-                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre...">
+                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre..." required/>
                                 </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email">Email*</label>
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="Email..." required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="telefono">Teléfono</label>
                                     <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Teléfono...">
@@ -403,35 +413,40 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="email">Email*</label>
-                                    <input type="text" class="form-control" id="email" name="email" placeholder="Email...">
-                                </div>
-                                <div class="form-group">
                                     <label for="empresa">Empresa</label>
                                     <input type="text" class="form-control" id="empresa" name="empresa" placeholder="Empresa...">
                                 </div>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="comentarios">¿En qué puedo ayudarte?*</label>
-                                    <textarea class="form-control" rows="4" name="comentarios"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-primary" value="Submit" id="submit">¡Envíame tu mensaje!</button>
+                                    <textarea class="form-control" rows="4" id="comentarios" name="comentarios" required></textarea>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+<!--                                    <img src="img/ajax.jpg" class="ajaxgif hide" />-->
+                                    <button type="submit" class="btn btn-primary" name="send" value="Send" id="send">¡Envíame tu mensaje!</button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="msg"></div>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="col-md-4">
                     También puedes escribirme o ver más detalles de lo que hago a través de:
                     <div id="redesSociales">
                         <ul class="list-inline">
-                            <li><p><a><i class="fa fa-envelope fa-2x"></i></a>   nairoby.albarran@gmail.com</p></li>
-                            <li><p><a data-toggle="tooltip" title="Linkedin"><i class="fa fa-linkedin-square fa-2x"></i></a>  es.linkedin.com/in/nairobialbarran/</p></li> 
-                            <li><p><a data-toggle="tooltip" title="Github"><i class="fa fa-github-square fa-2x"></i></a>  https://github.com/nairobyalbarran</p></li>
+                            <li><p><a><i class="fa fa-envelope fa-2x" ></i></a><a href="mailto:nairoby.albarran@gmail.com"> nairoby.albarran@gmail.com</a></p></li>
+                            <li><p><a data-toggle="tooltip" title="Linkedin"><i class="fa fa-linkedin-square fa-2x" ></i></a><a href="http://es.linkedin.com/in/nairobialbarran"> http://es.linkedin.com/in/nairobialbarran/</a></p></li> 
+                            <li><p><a data-toggle="tooltip" title="Github"><i class="fa fa-github-square fa-2x" ></i></a><a href="https://github.com/nairobyalbarran"> https://github.com/nairobyalbarran</a></p></li>
                         </ul>
                     </div>
                 </div>      
@@ -439,6 +454,7 @@
         </div>
 
         <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+
         <script type="text/javascript" src="js/jquery.appear.js"></script>
         <script type="text/javascript" src="js/carousel.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>

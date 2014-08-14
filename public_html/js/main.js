@@ -41,7 +41,6 @@ $(document).ready(function() {
     $('.carousel').carousel();
     $('.descripcion').hide();
     $('#app').on('click', function() {
-        //$("#app").hide();
         $('.detalleApp1').fadeIn(2000);
         $('.detalleApp1').insertAfter('.portfolio');
         $('.detalleApp2').hide();
@@ -49,7 +48,6 @@ $(document).ready(function() {
     });
 
     $('#app2').on('click', function() {
-        //$("#app").hide();
         $('.detalleApp2').fadeIn(2000);
         $('.detalleApp2').insertAfter('.portfolio');
         $('.detalleApp1').hide();
@@ -57,7 +55,6 @@ $(document).ready(function() {
     });
 
     $('#app3').on('click', function() {
-        //$("#app").hide();
         $('.detalleApp3').fadeIn(2000);
         $('.detalleApp3').insertAfter('.portfolio');
         $('.detalleApp1').hide();
@@ -70,7 +67,80 @@ $(document).ready(function() {
         $('.detalleApp3').hide();
         $('.aplicaciones').insertAfter('.portfolio');
     });
+
+
+    $("#send").click(function() {
+
+        $(".c_error").remove();
+        var nombre = $("#nombre").val();
+        email = $("#email").val();
+        validacion_email = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
+        telefono = $("#telefono").val();
+        empresa = $("#empresa").val();
+        comentarios = $("#comentarios").val();
+
+        if (nombre == "") {
+            $("#nombre").focus();
+            $('#nombre').after("<span class='c_error' id='c_error_nombre'>Introduzca un nombre</span>");
+
+            return false;
+        } else if (email == "" || !validacion_email.test(email)) {
+            $("#email").focus();
+            $('#email').after("<span class='c_error' id='c_error_email'>Introduzca un Email</span>");
+            return false;
+        } else if (comentarios == "" || comentarios.length <= 20) {
+            $("#comentarios").focus();
+            $('#comentarios').after("<span class='c_error' id='c_error_comentarios'>Introduzca al menos 20 caracteres</span>");
+            return false;
+        } else {
+            $('.ajaxgif').removeClass('hide');
+            $.ajax({
+                type: "POST",
+                url: "mail.php",
+                data: {
+                    'nombre': nombre,
+                    'email': email,
+                    'telefono': telefono,
+                    'empresa': empresa,
+                    'comentarios': comentarios
+                },
+                dataType: 'json',
+                encode: true,
+                complete: function() {
+                    $('#formulario').each(function() {
+                        this.reset();
+                    });
+                }
+            }).done(function(resultado) {
+                $('.ajaxgif').hide();
+                if (resultado.success) {
+                    $('.msg').text(JSON.stringify(resultado.success)).addClass('msg_ok');
+                }
+                else {
+                    $('.msg').text(JSON.stringify(resultado.mensaje)).addClass('msg_Nok').animate({'right': '130px'}, 300);
+                }
+
+                console.log(resultado);
+            }).fail(function(error) {
+                alert('ERROR');
+                console.log(error);
+                $('.ajaxgif').hide();
+                $('.msg').text('Hubo un error!').addClass('msg_error').animate({'right': '130px'}, 300);
+
+            });
+
+            return false;
+
+        }
+
+    });
+
+
 });
+
+
+
+
 
 
 
