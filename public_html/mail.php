@@ -1,18 +1,7 @@
 <?php
 
 header('Content-Type: application/json');
-$resultado= []; 
-$errors = []; 
-
-if (empty($_POST['nombre']))
-    $errors['nombre'] = 'Introduzca un nombre.';
-
-if (empty($_POST['email']))
-    $errors['email'] = 'Introduzca un email.';
-
-if (empty($_POST['comentarios']))
-    $errors['comentarios'] = 'Introduzca un mensaje.';
-
+$resultado= array(); 
 
 
 if (!empty($_POST['nombre']) AND !empty($_POST['email']) AND !empty($_POST['comentarios'])) {

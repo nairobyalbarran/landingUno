@@ -1,8 +1,5 @@
 jQuery(document).ready(function() {
-    /*----------------------------------------------------*/
-    /*  Animated Progress Bars
-     /*----------------------------------------------------*/
-
+   
     jQuery('.skills li').each(function() {
         jQuery(this).appear(function() {
             jQuery(this).animate({opacity: 1, left: "0px"}, 800);
@@ -126,16 +123,10 @@ $(document).ready(function() {
                 console.log(error);
                 $('.ajaxgif').hide();
                 $('.msg').text('Hubo un error!').addClass('msg_error').animate({'right': '130px'}, 300);
-
             });
-
             return false;
-
         }
-
     });
-
-
 });
 
 
