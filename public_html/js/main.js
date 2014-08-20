@@ -130,8 +130,23 @@ $(document).ready(function() {
 });
 
 $(window).load(proyectos);
+function config()
+{
+        $('#aplicaciones').append(proyectos); 
+}
 
-
+function proyectos()
+{
+    $ajax({
+        url:mail.php,
+        type:'POST',
+        data:{
+            'nombreProyecto':nombreProyecto,
+            'descripcionProyecto':descripcionProyecto
+        }
+        
+    })
+}
 
 
 
