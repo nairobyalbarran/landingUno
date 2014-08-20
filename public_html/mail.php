@@ -2,6 +2,16 @@
 
 header('Content-Type: application/json');
 $resultado= array(); 
+/**
+ * Almaceno datos de los proyectos 
+ */
+$listaProyectos= array();
+
+$nombreProyecto=$_POST['nombreProyecto'];
+$descripcionProyecto=$_POST['descripcionProyecto'];
+
+$proyecto=array('nombre'=>'Trivial:Símbolos Químicos', 'descripción'=>'Juego divertido para aprender o recordar los símbolos químicos de los elementos de la tabla periódica.');
+$listaProyectos[]=$proyecto;
 
 
 if (!empty($_POST['nombre']) AND !empty($_POST['email']) AND !empty($_POST['comentarios'])) {
@@ -49,4 +59,5 @@ if (!empty($_POST['nombre']) AND !empty($_POST['email']) AND !empty($_POST['come
     
 }
 echo json_encode($resultado);
-?>
+echo json_encode($listaProyectos);
+
