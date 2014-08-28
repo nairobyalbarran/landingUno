@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-   
+
     jQuery('.skills li').each(function() {
         jQuery(this).appear(function() {
             jQuery(this).animate({opacity: 1, left: "0px"}, 800);
@@ -37,13 +37,20 @@ $(document).ready(function() {
 
     $('.carousel').carousel();
     $('.descripcion').hide();
-    $('#app').on('click', function() {
-        $('.detalleApp1').fadeIn(2000);
-        $('.detalleApp1').insertAfter('.portfolio');
-        $('.detalleApp2').hide();
-        $('.detalleApp3').hide();
-    });
-
+    
+    function mostrarDetalles(idAplicacion) {        
+        // Actualizar plantilla de detalles de la aplicación
+        // Pedir los datos por ajax:
+        $.ajax(idAplicacion + '.json', function (datos) {
+            // Ocultar los detalles de una aplicación que se estuviera mostrando
+            $('.detalleApp').hide();
+            actualizarPlantillaAplicacion(datos);
+            // Hacer el fade para mostrar los detalles de la nueva app
+            $('.detalleApp').fadeIn(2000);
+            $('.detalleApp').insertAfter('.portfolio');
+        });
+    };
+/*
     $('#app2').on('click', function() {
         $('.detalleApp2').fadeIn(2000);
         $('.detalleApp2').insertAfter('.portfolio');
@@ -57,13 +64,12 @@ $(document).ready(function() {
         $('.detalleApp1').hide();
         $('.detalleApp2').hide();
     });
-
+   */
     $('.close').on('click', function() {
-        $('.detalleApp1').hide();
-        $('.detalleApp2').hide();
-        $('.detalleApp3').hide();
+        $('.detalleApp').hide();
         $('.aplicaciones').insertAfter('.portfolio');
     });
+
 
 
     $("#send").click(function() {
@@ -127,26 +133,73 @@ $(document).ready(function() {
             return false;
         }
     });
+
+   
+       
+       /** * Genera código HTML a partir de una plantilla y datos de sustitución *
+        *  @param {string} pantilla - Cadena con la plantilla HTML * @param {Object} datos - 
+        *  Diccionario de nombres de datos a remplazar * con su respectivo valor */ 
+     var plantillaAplicaciones= $("#plantillaAplicaciones").html();
+     
+     function generarHtml(plantilla,datos){
+         var html=plantilla;
+         var nombreDeDatos=Object.keys(datos);
+         nombreDeDatos.forEach(function (nombreDato){
+            console.log(nombreDato);
+            var nombre= new RegExp('{{' + nombreDato + '}}', 'g');
+            var valor=datos[nombreDato];
+            console.log(valor);
+            html=html.replace(nombre,valor);
+         });
+         return html;
+     }
+     
+     /**
+      * Actualiza la lista de alumnos cuyo cumpleaños coincide con la fecha indicada
+      * @param {object[]} listaAplicaciones- Lista de obejtos con los datos de la aplicación: nombre y foto
+      * 
+      */
+     
+ function actualizarAplicaciones(listaAplicaciones){
+     $('#aplicacion').html('');
+     listaAplicaciones.forEach(function(aplicacion){
+        var html=generarHtml(plantillaAplicaciones, aplicacion);
+        $('#aplicacion').append(html);
+     });
+ }
+ 
+ /**
+  * Carga la lista de alumnos que cumplan años y actualiza la interfaz 
+  * con los datos cargado
+  */
+ 
+ function cargarAplicaciones(){
+     var url='proyectos.json';
+     $.getJSON(url,function(result){
+         if(result){
+             actualizarAplicaciones(result);
+         }
+     });
+ }
+  $(window).load(cargarAplicaciones);
+//        $.getJSON('proyectos.json')
+//                .success(function(respuesta) {
+//                    for (i = 0; i <respuesta.nombreProyecto.length; i++) {
+//                       contenidoDiv= respuesta.nombreProyecto[i] ;
+//                        alert(contenidoDiv);
+//                        $('.titulo').append(contenidoDiv);
+//                       
+//
+//                    }
+//
+//                    console.log(respuesta);
+//
+//                   
+//                });
+
+
+
 });
-
-$(window).load(proyectos);
-function config()
-{
-        $('#aplicaciones').append(proyectos); 
-}
-
-function proyectos()
-{
-    $ajax({
-        url:mail.php,
-        type:'POST',
-        data:{
-            'nombreProyecto':nombreProyecto,
-            'descripcionProyecto':descripcionProyecto
-        }
-        
-    })
-}
 
 
 

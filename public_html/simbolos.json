@@ -1,0 +1,11 @@
+{
+    "id": "simbolos",
+    "nombre": "Trivial: Símbolos Químicos",
+    "descripcion": "Juego divertido para aprender o recordar los símbolos químicos de los elementos de la tabla periódica.",
+    "tecnologias": ["HTML5 & CCS3", "JavaScript", "jQuery Mobile", "LocalStorage", "PhoneGap", "Responsive Web Design"],
+    "imagenes": ["img/simbolos_uno.png", "img/captura1_320x480.png", "img/captura3_320x480.png", "img/captura4_320x480.png"],
+    "plataformas": [
+        {"nombre": "Android", "url": "https://play.google.com/store/apps/details?id=org.nairobyalbarran"},
+        {"nombre": "Firefox OS", "url": "https://marketplace.firefox.com/app/simbolos-3/"}
+    ]
+}

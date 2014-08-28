@@ -1,0 +1,20 @@
+[
+    {
+        "id": "simbolos",
+        "nombre": "Símbolos Químicos",
+        "descripcion": "Juega con los elementos de la tabla periódica",
+        "foto": "img/simbolos_uno.png"
+    },
+    {
+        "id": "locMap",
+        "nombre": "LocMap",
+        "descripcion": "Obten tu ubicación actual y compartela",
+        "foto": "img/locmap_dos.png"
+    },
+    {
+        "id": "infinitum",
+        "nombre": "Infinitum",
+        "descripcion": "Ubica tus tiendas y sitios de comida más cercanos",
+        "foto": "img/infinitum_logo.png"
+    }
+]

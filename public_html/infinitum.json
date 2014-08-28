@@ -1,0 +1,10 @@
+{
+   "id": "infinitum",
+    "nombre": "Infinitum",
+    "descripcion": "Esta aplicación fue desarrollada durante el Hackathon,Majada Hack 2014,Tuve la oportunidad de colaborar como desarrollador Front End.",
+    "tecnologias": ["HTML5 & CCS3", "JavaScript", "Bootstrap", "Responsive Web Design"],
+    "imagenes": ["img/simbolos_uno.png", "img/captura1_320x480.png", "img/captura3_320x480.png", "img/captura4_320x480.png"],
+    "plataformas": [
+        {"nombre": "Más detalles", "url": "http://jerogaren.com/blog/articulo/majadahack-2014/"}
+    ]
+}

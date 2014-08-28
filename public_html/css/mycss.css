@@ -188,3 +188,5 @@ img{
 a:hover {
    text-decoration: none!important;
   }
+  
+p.descripcionApp { min-height: 41px; }
