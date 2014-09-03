@@ -37,34 +37,24 @@ $(document).ready(function() {
 
     $('.carousel').carousel();
     $('.descripcion').hide();
-    
-    function mostrarDetalles(idAplicacion) {        
-        // Actualizar plantilla de detalles de la aplicación
-        // Pedir los datos por ajax:
-        $.ajax(idAplicacion + '.json', function (datos) {
-            // Ocultar los detalles de una aplicación que se estuviera mostrando
-            $('.detalleApp').hide();
-            actualizarPlantillaAplicacion(datos);
-            // Hacer el fade para mostrar los detalles de la nueva app
-            $('.detalleApp').fadeIn(2000);
-            $('.detalleApp').insertAfter('.portfolio');
-        });
-    };
-/*
-    $('#app2').on('click', function() {
-        $('.detalleApp2').fadeIn(2000);
-        $('.detalleApp2').insertAfter('.portfolio');
-        $('.detalleApp1').hide();
-        $('.detalleApp3').hide();
-    });
 
-    $('#app3').on('click', function() {
-        $('.detalleApp3').fadeIn(2000);
-        $('.detalleApp3').insertAfter('.portfolio');
-        $('.detalleApp1').hide();
-        $('.detalleApp2').hide();
-    });
-   */
+
+
+        /*
+     $('#app2').on('click', function() {
+     $('.detalleApp2').fadeIn(2000);
+     $('.detalleApp2').insertAfter('.portfolio');
+     $('.detalleApp1').hide();
+     $('.detalleApp3').hide();
+     });
+     
+     $('#app3').on('click', function() {
+     $('.detalleApp3').fadeIn(2000);
+     $('.detalleApp3').insertAfter('.portfolio');
+     $('.detalleApp1').hide();
+     $('.detalleApp2').hide();
+     });
+     */
     $('.close').on('click', function() {
         $('.detalleApp').hide();
         $('.aplicaciones').insertAfter('.portfolio');
@@ -134,72 +124,82 @@ $(document).ready(function() {
         }
     });
 
-   
-       
-       /** * Genera código HTML a partir de una plantilla y datos de sustitución *
-        *  @param {string} pantilla - Cadena con la plantilla HTML * @param {Object} datos - 
-        *  Diccionario de nombres de datos a remplazar * con su respectivo valor */ 
-     var plantillaAplicaciones= $("#plantillaAplicaciones").html();
-     
-     function generarHtml(plantilla,datos){
-         var html=plantilla;
-         var nombreDeDatos=Object.keys(datos);
-         nombreDeDatos.forEach(function (nombreDato){
-            console.log(nombreDato);
-            var nombre= new RegExp('{{' + nombreDato + '}}', 'g');
-            var valor=datos[nombreDato];
-            console.log(valor);
-            html=html.replace(nombre,valor);
-         });
-         return html;
-     }
-     
-     /**
-      * Actualiza la lista de alumnos cuyo cumpleaños coincide con la fecha indicada
-      * @param {object[]} listaAplicaciones- Lista de obejtos con los datos de la aplicación: nombre y foto
-      * 
-      */
-     
- function actualizarAplicaciones(listaAplicaciones){
-     $('#aplicacion').html('');
-     listaAplicaciones.forEach(function(aplicacion){
-        var html=generarHtml(plantillaAplicaciones, aplicacion);
-        $('#aplicacion').append(html);
-     });
- }
- 
- /**
-  * Carga la lista de alumnos que cumplan años y actualiza la interfaz 
-  * con los datos cargado
-  */
- 
- function cargarAplicaciones(){
-     var url='proyectos.json';
-     $.getJSON(url,function(result){
-         if(result){
-             actualizarAplicaciones(result);
-         }
-     });
- }
-  $(window).load(cargarAplicaciones);
-//        $.getJSON('proyectos.json')
-//                .success(function(respuesta) {
-//                    for (i = 0; i <respuesta.nombreProyecto.length; i++) {
-//                       contenidoDiv= respuesta.nombreProyecto[i] ;
-//                        alert(contenidoDiv);
-//                        $('.titulo').append(contenidoDiv);
-//                       
-//
-//                    }
-//
-//                    console.log(respuesta);
-//
-//                   
-//                });
 
+
+    /** * Genera código HTML a partir de una plantilla y datos de sustitución *
+     *  @param {string} pantilla - Cadena con la plantilla HTML * @param {Object} datos - 
+     *  Diccionario de nombres de datos a remplazar * con su respectivo valor */
+    var plantillaAplicaciones = $("#plantillaAplicaciones").html();
+
+    function generarHtml(plantilla, datos) {
+        var html = plantilla;
+        var nombreDeDatos = Object.keys(datos);
+        nombreDeDatos.forEach(function(nombreDato) {
+            console.log(nombreDato);
+            var nombre = new RegExp('{{' + nombreDato + '}}', 'g');
+            var valor = datos[nombreDato];
+            console.log(valor);
+            html = html.replace(nombre, valor);
+        });
+        return html;
+    }
+
+    /**
+     * Actualiza la lista de alumnos cuyo cumpleaños coincide con la fecha indicada
+     * @param {object[]} listaAplicaciones- Lista de obejtos con los datos de la aplicación: nombre y foto
+     * 
+     */
+
+    function actualizarAplicaciones(listaAplicaciones) {
+        $('#aplicacion').html('');
+        listaAplicaciones.forEach(function(aplicacion) {
+            var html = generarHtml(plantillaAplicaciones, aplicacion);
+            $('#aplicacion').append(html);
+        });
+    }
+
+    /**
+     * Carga la lista de alumnos que cumplan años y actualiza la interfaz 
+     * con los datos cargado
+     */
+
+    function cargarAplicaciones() {
+        var url = 'proyectos.json';
+        $.getJSON(url, function(result) {
+            if (result) {
+                actualizarAplicaciones(result);
+            }
+        });
+    }
+    $(window).load(cargarAplicaciones);
 
 
 });
 
 
 
+function actualizarPlantillaAplicacion(datos) {
+
+        $("#nombreApp").text(datos.nombre);
+        $("#descripcionApp").text(datos.descripcion);
+    }
+
+
+
+    function mostrarDetalles (idAplicacion) {
+        // Actualizar plantilla de detalles de la aplicación
+        // Pedir los datos por ajax:
+
+        $.getJSON(idAplicacion+".json", function(datos) {
+            // Ocultar los detalles de una aplicación que se estuviera mostrando
+            if (datos) {
+                alert(idAplicacion+".json");
+                $('.detalleApp').hide();
+                console.log(datos);
+                actualizarPlantillaAplicacion(datos);
+                // Hacer el fade para mostrar los detalles de la nueva app
+                $('.detalleApp').fadeIn(2000);
+                $('.detalleApp').insertAfter('.portfolio');
+            }
+        });
+    };

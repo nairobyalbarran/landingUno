@@ -3,7 +3,7 @@
     "nombre": "LocMap",
     "descripcion": "Localiza tu posición en el mapa y proporciona tu dirección actual.",
     "tecnologias": ["HTML5 & CCS3", "JavaScript", "jQuery Mobile", "Leaflet", "Google Map API", "PhoneGap", "Responsive Web Design"],
-    "imagenes": ["img/simbolos_uno.png", "img/captura5_320x480.png", "img/captura6_320x480.png", "img/captura6_320x480.png", "img/captura7_320x480.png"],
+    "imagenes": ["img/simbolos_uno.png", "img/captura5_320x480.png", "img/captura6_320x480.png", "img/captura7_320x480.png"],
     "plataformas": [
         {"nombre": "Firefox OS", "url": "https://marketplace.firefox.com/app/locmap?src=search/"}
     ]

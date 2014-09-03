@@ -152,21 +152,21 @@
                             <p class="descripcionApp">{{descripcion}}</p>
                             <a><img src="{{foto}}"></a> 
                             <p></p>
-                            <p><a class="btn btn-info" href="#detalles1" role="button" onclick="mostrarDetalles({{nombre}})">Detalles &raquo;</a></p>
+                            <p><a class="btn btn-info" href="#detalles1" role="button" onclick='mostrarDetalles("{{id}}");'>Detalles &raquo;</a></p>
                         </div>
-
                     </div>
+                </div>
                     </script>
 
-         </div>
+                </div>
 
-                <!-- </div> -->
+               
                 <div class="container descripcion">
                     <div class="row descripcion">
-                        <div class="col-md-5 descripcion detalleApp1">
-                            <!-- Carousel==================== -->
+                        <div class="col-md-5 descripcion detalleApp">
+<!--                             Carousel==================== -->
                             <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
+<!--                                 Indicators -->
                                 <ol class="carousel-indicators">
                                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                                     <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -205,14 +205,14 @@
                                 </div>
                                 <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
                                 <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-                            </div><!-- /.carousel -->
+                          </div> <!--  /.carousel -->
                         </div>
-                        <div class="col-md-7 descripcion detalleApp1">
+                        <div class="col-md-7 descripcion detalleApp">
                             <div>
                                 <button type="button" class="close" id="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                <h4>Trivial: Símbolos Químicos</h4>
-                                <p class="text-left">Juego divertido para aprender o recordar los símbolos químicos de los elementos de la tabla periódica.</p>
-                                <p><strong>Técnologías utilizadas:</strong></p>
+                                <h4 id="nombreApp"></h4>
+                                <p class="text-left" id="descripcionApp"></p>
+                                <p id="tecnologias"><strong>Técnologías</strong></p>
                                 <ul>
                                     <li>HTML5 & CCS3</li>
                                     <li>JavaScript</li>
@@ -303,7 +303,7 @@
                         </div>      
                     </div>
                 </div>
-
+                 <script type="text/javascript" src="js/handlebars-v2.0.0.js"></script>
                 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
                 <script type="text/javascript" src="js/jquery.appear.js"></script>
                 <script type="text/javascript" src="js/carousel.js"></script>
